@@ -2,6 +2,7 @@ services:
   - type: web
     name: mindfeed-backend
     env: node
+    plan: free
     buildCommand: cd Server && npm install
     startCommand: cd Server && node index.js
     envVars:
@@ -14,6 +15,7 @@ services:
   - type: web
     name: mindfeed-frontend
     env: static
+    plan: free
     buildCommand: cd client && npm install && npm run build
     staticPublishPath: ./client/dist
     envVars:
